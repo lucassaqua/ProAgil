@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EventosComponent } from './eventos/eventos.component';
@@ -12,8 +12,9 @@ import { EventosComponent } from './eventos/eventos.component';
    ],                 // e saiba o que é o <app-eventos>
    imports: [
       BrowserModule,
-      AppRoutingModule
-   ],
+      AppRoutingModule,
+      HttpClientModule  // é o que vai permitir pegar os eventos do backend,
+   ],                  // para mostrar no frontend
    providers: [],
    bootstrap: [
       AppComponent
