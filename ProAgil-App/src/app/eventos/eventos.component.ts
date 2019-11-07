@@ -41,10 +41,14 @@ export class EventosComponent implements OnInit {
   }
   getEventos(){
     this.http.get('http://localhost:5000/api/values').subscribe(
-      response => { this.eventos = response;
+      response => { 
+        this.eventos = response;
+        //console.log(response); serve pra ver o que a função está retornando, pelo Console do Navegador
+
     }, error => {
         console.log(error);
       });
   }
 
+  
 }
